@@ -4,11 +4,28 @@
 
 from words import get_text, words
 
-
+"""
+Given a list of fully-qualified filenames, return a list of them
+whose file contents has all words in terms as normalized by your words() function.
+Parameter terms is a list of strings.
+Perform a linear search, looking at each file one after the other.
+"""
 def linear_search(files, terms):
-    """
-    Given a list of fully-qualified filenames, return a list of them
-    whose file contents has all words in terms as normalized by your words() function.
-    Parameter terms is a list of strings.
-    Perform a linear search, looking at each file one after the other.
-    """
+    returnFiles = []
+    searchTerms = set(terms)
+    for item in files:
+        fileWords = set(words(get_text(item)))
+        if(searchTerms < fileWords):
+            returnFiles.append(item)
+        #common = fileWords & searchTerms
+        #if(common == searchTerms):
+         #   print common
+          #  returnFiles.append(item)
+
+    return returnFiles
+
+
+
+
+
+
