@@ -13,9 +13,9 @@ from words import filelist, words, results
 """
 Usage:
 
-$ python search.py linear /Users/USERID/msan501/data/slate
-$ python search.py index /Users/USERID/msan501/data/slate
-$ python search.py myhtable /Users/USERID/msan501/data/slate
+$ python search.py linear "/Users/spencersmith/data/berlitz1"
+$ python search.py index /Users/spencersmith/data/berlitz1
+$ python search.py myhtable /Users/spencersmith/data/berlitz1
 """
 
 impl = sys.argv[1]

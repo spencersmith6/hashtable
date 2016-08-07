@@ -13,7 +13,6 @@ Returns a dict object.
 def create_index(files):
 
     wordBook =dict()
-    allWords = []
     for item in files:
         fileWords = set(words(get_text(item)))
         for word in fileWords:
@@ -35,10 +34,19 @@ You can only use the index to find matching files; you cannot open the files and
 def index_search(files, index, terms):
 
     files = set(files)
-    print terms
-    overlap = set(index[terms[0]])
-    for word in terms:
+    validTerms = []
+    for key in index.keys():
+        for term in terms:
+            if key ==term:
+                validTerms += [term]
+
+    if len(validTerms)==0:
+        return []
+
+    overlap = set(index[validTerms[0]])
+    for word in validTerms:
         overlap = set(index[word]) & overlap
+
     return list(overlap)
 
 

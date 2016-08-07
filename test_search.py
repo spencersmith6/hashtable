@@ -3,7 +3,7 @@ from linsearch import linear_search
 from myhtable_search import myhtable_index_search, myhtable_create_index
 from words import filelist, words, filenames
 
-rootdir = "/Users/parrt/github/msan501/data/berlitz1"
+rootdir = "/Users/spencersmith/data/berlitz1"
 
 
 def test_linear_berlitz_none():
@@ -82,4 +82,4 @@ def test_myhtable_berlitz():
     expected = ['HistoryHawaii.txt']
     assert filenames(myhtable_docs) == expected
 
-test_linear_berlitz()
+test_myhtable_berlitz()

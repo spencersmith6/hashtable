@@ -17,10 +17,7 @@ def linear_search(files, terms):
         fileWords = set(words(get_text(item)))
         if(searchTerms < fileWords):
             returnFiles.append(item)
-        #common = fileWords & searchTerms
-        #if(common == searchTerms):
-         #   print common
-          #  returnFiles.append(item)
+
 
     return returnFiles
 
