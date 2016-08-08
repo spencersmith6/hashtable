@@ -19,7 +19,8 @@ def hashcode(o):
     h = 0
     if type(o) == type("String"):
         for c in range(len(o)):
-            return h * 31 + ord(o[c])
+            h =h * 31 + ord(o[c])
+        return h
     elif type(o) == type(1):
         return o
     else:

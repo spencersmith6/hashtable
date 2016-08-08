@@ -45,7 +45,8 @@ def preview(qfile):
     f = open(qfile)
     text = f.read()
     lines = text.splitlines()
-    finaltext = lines[6:11]
+
+    finaltext = lines[6:14]
 
     return "\n".join(finaltext)
 
